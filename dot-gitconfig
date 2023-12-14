@@ -1,0 +1,18 @@
+[user]
+	name = Alexander Engelhardt
+	email = alexander.w.engelhardt@gmail.com
+[credential]
+	helper = cache
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[log]
+	decorate = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+[core]
+	editor = vim
