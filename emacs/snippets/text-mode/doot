@@ -1,4 +1,0 @@
-# name: timestamp misc
-# key: doot
-# --
-doot doot `(current-time-string)`

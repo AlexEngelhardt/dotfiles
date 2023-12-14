@@ -6,3 +6,5 @@
 ;;;; AUCTEX
 (load "auctex.el" nil t t)
 ; (load "preview-latex.el" nil t t)
+
+(eval-after-load 'latex '(add-to-list 'LaTeX-verbatim-environments "lstlisting"))
