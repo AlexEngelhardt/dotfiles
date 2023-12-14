@@ -2,6 +2,18 @@
 
 Config files
 
+## Why?
+
+- https://dotfiles.github.io/
+- https://github.com/webpro/awesome-dotfiles/tree/master
+
+## Inspiration
+
+- OMG the guy and his videos here: https://github.com/craftzdog/dotfiles-public
+  - Oh the speed! https://www.youtube.com/watch?v=sSOfr2MtRU8
+  - And this: https://www.youtube.com/watch?v=KKxhf50FIPI
+- https://dotfiles.github.io/inspiration/
+
 ## Emacs
 
 - Symlink `~/.emacs` to the `dot-emacs.el` file here
@@ -19,6 +31,7 @@ Config files
 ## Tmux
 
 - Symlink `~/.tmux.conf` to the file here
+- Symlink `~/.bash_profile` to the file here, so that tmux loads your `.bashrc` too
 
 ## lubuntu-rc.xml
 
