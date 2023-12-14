@@ -19,3 +19,7 @@ Config files
 ## Tmux
 
 - Symlink `~/.tmux.conf` to the file here
+
+## lubuntu-rc.xml
+
+- Symlink `~/.config/openbox/lubuntu-rc.xml` to here
