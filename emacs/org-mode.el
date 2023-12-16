@@ -16,7 +16,7 @@
 (setq org-special-ctrl-a/e t) ;; C-a and C-e first only consider the headline
 
 (setq org-startup-truncated nil)  ; wrap lines instead of continuing lines
-;(setq org-startup-folded nil)  ; expand all headings
+(setq org-startup-folded nil)  ; expand all headings
 
 ;; Hide the first n-1 stars
 (setq org-hide-leading-stars t)
