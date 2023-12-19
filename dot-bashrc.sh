@@ -2,6 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+PATH=~/.local/kitty.app/bin:$PATH
+
+alias vi=nvim
+alias vim=nvim
+
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'

@@ -18,8 +18,8 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
 
 ## Setup TODOs
 
-- Choose a terminal emulator. alacritty seems popular. Or kitty?
-- Finally switch from emacs to vim? :-(
+- Install kitty as a terminal emulator. terminator couldn't show all UTF-8 symbols, which is bad for the new-style status bars etc.  alacritty is even more popular, but Lubuntu 18.10 couldn't install it easily.
+- Install neovim. It's time to ditch emacs :)
 - Switch from bash to zsh
   - And a ton of plugins: https://github.com/unixorn/awesome-zsh-plugins
     - most importantly, oh-my-zsh
