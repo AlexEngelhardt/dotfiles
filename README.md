@@ -16,10 +16,15 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
   - And this: https://www.youtube.com/watch?v=KKxhf50FIPI
 - https://dotfiles.github.io/inspiration/
 
-## Setup TODOs
+## TODOs
+
+- [X] How to make Ctrl-Alt-t start tmux directly
+- [X] How to enable middle click to paste in nvim?
+
+## Setup
 
 - Install kitty as a terminal emulator. terminator couldn't show all UTF-8 symbols, which is bad for the new-style status bars etc.  alacritty is even more popular, but Lubuntu 18.10 couldn't install it easily.
-- Install neovim. It's time to ditch emacs :)
+- Install neovim **from source** (My Ubuntu 18.10's nvim doesn't allow kickstart.nvim). It's time to ditch emacs :)
 - Switch from bash to zsh
   - And a ton of plugins: https://github.com/unixorn/awesome-zsh-plugins
     - most importantly, oh-my-zsh
@@ -28,22 +33,25 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
 
 ## Setup
 
+### Tmux
+
+https://www.youtube.com/watch?v=H70lULWJeig
+
+### Neovim
+
+Install `kickstart.nvim` as described here:
+https://www.youtube.com/watch?v=stqUbv-5u2s
+(the init.lua in this repo is adapted from there)
+
 ### Emacs
 
 - Symlink `~/.emacs` to the `dot-emacs.el` file here
 - It just loads everything in the `emacs` folder, which by default is in `$HOME/github/dotfiles/emacs`.
 
-### Bash and bash-it
+### zsh and oh-my-zsh
 
-- Symlink `~/.bashrc` to the file here
-- Install `bash-it` from github
-  - Run one of these to get started:
-
-```
-bash-it aliases
-bash-it completions
-bash-it plugins
-```
+- Symlink `~/.zshrc` to the file here
+- Install `oh-my-zsh` from github
 
 ### Git
 
