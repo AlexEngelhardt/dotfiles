@@ -663,5 +663,10 @@ cmp.setup {
   },
 }
 
+-- Alex' modifications start here
+
+-- Use 'jk' instead of <Esc> to switch from insert to visual:
+vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true})
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

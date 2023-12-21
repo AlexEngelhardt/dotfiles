@@ -41,8 +41,6 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
     - git, taskwarrior, tmux, python look promising
 - Try [ripgrep](https://www.dewanahmed.com/ripgrep/) instead of grep, fd instead of find, and look here for more ideas:  https://github.com/ibraheemdev/modern-unix
 
-## Setup
-
 ### Kitty
 
 - Install kitty from apt (if available?) or source
@@ -81,7 +79,10 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 ### Neovim
 
 Install `kickstart.nvim` as described here: https://www.youtube.com/watch?v=stqUbv-5u2s
-(the init.lua in this repo is adapted from there)
+
+The init.lua in this repo is adapted from https://github.com/nvim-lua/kickstart.nvim/tree/master
+
+- Symlink `~/.config/nvim/init.lua` to the file here
 
 ### Emacs
 
