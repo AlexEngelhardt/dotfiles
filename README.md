@@ -21,14 +21,27 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
 
 - [X] How to make Ctrl-Alt-t start tmux directly
 - [X] How to enable middle click to paste in nvim?
-- [ ] Install nicer fonts for zsh's p10k theme: https://github.com/romkatv/powerlevel10k#fonts
-- [ ] Use the vim-style pane switching by installing christoomey/vim-tmux-navigator in nvim too. I don't yet know how to install plugins in nvim
-- [ ] Customize tmux' dracula theme: https://draculatheme.com/tmux
-- [ ] vim leave edit mode with 'jk' instead of Esc
+- [X] Install nicer fonts for zsh's p10k theme:
+https://github.com/romkatv/powerlevel10k#fonts
+- [ ] Make copy+paste behave the same in terminals and vim
+  - mouse-highlight and middle-click?
+  - Ctrl-Shift-C and V?
+- [ ] Use the vim-style pane switching by installing
+christoomey/vim-tmux-navigator in nvim too. I don't yet know how to install
+plugins in nvim
+  - [ ] Custom, additional nvim files
+  - [ ] vim-tmux-navigator in tmux *and* vim:
+  https://youtu.be/DzNmUNvnB04?t=423
+- [X] Customize tmux' dracula theme: https://draculatheme.com/tmux
+- [X] vim leave edit mode with 'jk' instead of Esc
 - [ ] Play with i3
 - [X] zsh autosuggestions as you type
 - [ ] Map CapsLock to Ctrl
-- [ ] install ripgrep, and some of these too? https://github.com/ibraheemdev/modern-unix
+- [ ] install ripgrep, and some of these too?
+https://github.com/ibraheemdev/modern-unix
+- [ ] Vim has orgmode! https://github.com/nvim-orgmode/orgmode
+- [ ] Try NvChad (and NvimTree to browse files). Is it a plugin or a straight
+      config file? Does it conflict with nvim.kickstart?
 
 ## Setup
 
@@ -44,7 +57,8 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
 ### Kitty
 
 - Install kitty from apt (if available?) or source
-- Install Nerd Font files from here: https://github.com/romkatv/powerlevel10k#fonts
+- Install (I used MesloLGS NF) Nerd Font files from here:
+  https://github.com/romkatv/powerlevel10k#fonts
   - sudo mv them into `usr/share/fonts/truetype/` and run `sudo fc-cache -f -v`
 - Symlink `~/.config/kitty/kitty.conf` to the file here
 
@@ -82,7 +96,13 @@ Install `kickstart.nvim` as described here: https://www.youtube.com/watch?v=stqU
 
 The init.lua in this repo is adapted from https://github.com/nvim-lua/kickstart.nvim/tree/master
 
-- Symlink `~/.config/nvim/init.lua` to the file here
+- Symlink the whole folder `~/.config/nvim` to the folder here
+
+#### Learn vim
+
+- `vimtutor`
+- https://danielmiessler.com/p/vim
+- Drew Neil’s Practical Vim: Edit Text at the Speed of Thought
 
 ### Emacs
 
