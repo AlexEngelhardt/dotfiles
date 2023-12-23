@@ -195,6 +195,11 @@ e.g. C-A-e to start emacs, C-A-f to start a file manager
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <keybind key="C-A-k">
+      <action name="Execute">
+	      <execute>~/.local/kitty.app/bin/kitty</execute>
+      </action>
+    </keybind>
     <keybind key="C-A-t">
       <action name="Execute">
 	      <execute>~/.local/kitty.app/bin/kitty tmux</execute>
@@ -210,7 +215,7 @@ e.g. C-A-e to start emacs, C-A-f to start a file manager
         <execute>emacs</execute>
       </action>
     </keybind>
-    <keybind key="C-A-k">
+    <keybind key="C-A-l">
       <action name="Execute">
         <execute>lxlock</execute>
       </action>
