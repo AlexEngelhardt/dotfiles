@@ -1,9 +1,3 @@
--- this is nvim's init script
--- ln -s it into ~/.config/nvim/init.lua
--- I stole it from here: https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua
--- as described here: https://www.youtube.com/watch?v=stqUbv-5u2s
-
-
 --[[
 
 =====================================================================
@@ -630,7 +624,7 @@ cmp.setup {
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete {},
     ['<CR>'] = cmp.mapping.confirm {
@@ -662,11 +656,6 @@ cmp.setup {
     { name = 'path' },
   },
 }
-
--- Alex' modifications start here
-
--- Use 'jk' instead of <Esc> to switch from insert to visual:
-vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true})
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
