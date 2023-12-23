@@ -13,6 +13,7 @@
 	br = branch
 	ci = commit
 	st = status
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	ll = log --graph --decorate --oneline
+	la = log --all --graph --decorate --oneline
 [core]
 	editor = vim
