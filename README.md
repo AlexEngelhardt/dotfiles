@@ -26,22 +26,33 @@ https://github.com/romkatv/powerlevel10k#fonts
 - [ ] Make copy+paste behave the same in terminals and vim
   - mouse-highlight and middle-click?
   - Ctrl-Shift-C and V?
-- [ ] Use the vim-style pane switching by installing
-christoomey/vim-tmux-navigator in nvim too. I don't yet know how to install
-plugins in nvim
-  - [ ] Custom, additional nvim files
-  - [ ] vim-tmux-navigator in tmux *and* vim:
-  https://youtu.be/DzNmUNvnB04?t=423
+ https://youtu.be/DzNmUNvnB04?t=423
 - [X] Customize tmux' dracula theme: https://draculatheme.com/tmux
-- [X] vim leave edit mode with 'jk' instead of Esc
 - [ ] Play with i3
 - [X] zsh autosuggestions as you type
 - [ ] Map CapsLock to Ctrl
 - [ ] install ripgrep, and some of these too?
 https://github.com/ibraheemdev/modern-unix
+
+### nvim TODOs
+
+- [X] vim leave edit mode with 'jk' instead of Esc
+- [ ] Find out what the LSP is and does
 - [ ] Vim has orgmode! https://github.com/nvim-orgmode/orgmode
-- [ ] Try NvChad (and NvimTree to browse files). Is it a plugin or a straight
-      config file? Does it conflict with nvim.kickstart?
+- [ ] Try NvChad. Is it a plugin or a straight config file? Does it conflict with nvim.kickstart?
+- [ ] Install NvimTree plugin for nice file browsing. The plugins are called `nvim-tree/nvim-tree.lua` (and possibly `nvim-tree/nvim-web-devicons` too?)
+  - https://github.com/nvim-tree/nvim-tree.lua
+- [ ] More plugins to consider: https://github.com/rockerBOO/awesome-neovim#file-explorer
+- [ ] Learn to use the lazy.nvim package manager.
+  - https://github.com/folke/lazy.nvim
+- [-] Use the vim-style pane switching by installing
+christoomey/vim-tmux-navigator in nvim too. I don't yet know how to install
+plugins in nvim
+  - [X] Custom, additional nvim files
+  - [-] vim-tmux-navigator in tmux *and* vim:
+- [ ] Play with the leader key (Space) to see what it offers e.g. in Python files
+- [ ] Remove `kickstart-nvim.lua` and build your config from scratch 
+  - This playlist might help: https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
 
 ## Setup
 
