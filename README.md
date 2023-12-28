@@ -15,9 +15,25 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
   - Oh the speed! https://www.youtube.com/watch?v=sSOfr2MtRU8
   - And this: https://www.youtube.com/watch?v=KKxhf50FIPI
 - https://dotfiles.github.io/inspiration/
-- https://github.com/bashbunni/dotfiles/
 
-## TODOs
+## TODO once new laptop is there
+
+- [ ] Xubuntu and i3
+- [ ] Try neovide
+- [ ] install ripgrep, and some of these too?
+https://github.com/ibraheemdev/modern-unix
+
+## TODO emacs startup faster
+
+- [ ] Install `esup` the emacs startup profiler
+  - or [benchmark-init](https://github.com/dholm/benchmark-init-el), or [profile-dotemacs](https://www.emacswiki.org/emacs/ProfileDotEmacs)
+- [ ] Look at `C-h v load-path` and 
+- [ ] https://www.emacswiki.org/emacs/LoadPath
+- [ ] https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html
+- [ ] Or start from scratch with doom emacs?
+- [ ] Install treemacs though!
+
+## Misc TODOs
 
 - [X] How to make Ctrl-Alt-t start tmux directly
 - [X] How to enable middle click to paste in nvim?
@@ -31,18 +47,22 @@ https://github.com/romkatv/powerlevel10k#fonts
 - [ ] Play with i3
 - [X] zsh autosuggestions as you type
 - [ ] Map CapsLock to Ctrl
-- [ ] install ripgrep, and some of these too?
-https://github.com/ibraheemdev/modern-unix
 
 ### nvim TODOs
 
+- [ ] which-key (make sure which-key is about completions, e.g. "italic" in
+markdown mode, not about showing keybinds) should not complete on 'Enter'. Only
+on shift-Enter 
 - [X] vim leave edit mode with 'jk' instead of Esc
 - [ ] Find out what the LSP is and does
 - [ ] Vim has orgmode! https://github.com/nvim-orgmode/orgmode
-- [ ] Try NvChad. Is it a plugin or a straight config file? Does it conflict with nvim.kickstart?
-- [ ] Install NvimTree plugin for nice file browsing. The plugins are called `nvim-tree/nvim-tree.lua` (and possibly `nvim-tree/nvim-web-devicons` too?)
+- [ ] Try NvChad. Is it a plugin or a straight config file? Does it conflict
+with nvim.kickstart?
+- [ ] Install NvimTree plugin for nice file browsing. The plugins are called
+`nvim-tree/nvim-tree.lua` (and possibly `nvim-tree/nvim-web-devicons` too?)
   - https://github.com/nvim-tree/nvim-tree.lua
-- [ ] More plugins to consider: https://github.com/rockerBOO/awesome-neovim#file-explorer
+- [ ] More plugins to consider:
+https://github.com/rockerBOO/awesome-neovim#file-explorer
 - [ ] Learn to use the lazy.nvim package manager.
   - https://github.com/folke/lazy.nvim
 - [-] Use the vim-style pane switching by installing
@@ -50,9 +70,11 @@ christoomey/vim-tmux-navigator in nvim too. I don't yet know how to install
 plugins in nvim
   - [X] Custom, additional nvim files
   - [-] vim-tmux-navigator in tmux *and* vim:
-- [ ] Play with the leader key (Space) to see what it offers e.g. in Python files
+- [ ] Play with the leader key (Space) to see what it offers e.g. in Python
+files
 - [ ] Remove `kickstart-nvim.lua` and build your config from scratch 
-  - This playlist might help: https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
+  - This playlist might help:
+  https://www.youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
 
 ## Setup
 
