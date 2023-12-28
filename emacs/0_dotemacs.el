@@ -18,6 +18,9 @@
 ;; Hence the "0_" in the file name.
 (add-to-list 'load-path "~/github/dotfiles/emacs/packages/")
 
+;; The emacs startup profiler
+;; (add-to-list 'load-path "~/.emacs.d/elpa/esup-0.7.1")
+
 (set-language-environment "UTF-8") ; UTF-8 as default encoding
 ;;(setq debug-on-error t)
 (setq frame-title-format "%b")  ; buffer name as frame title instead of emacs@hostname
