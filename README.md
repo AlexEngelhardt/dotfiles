@@ -33,6 +33,16 @@ https://github.com/ibraheemdev/modern-unix
 - [ ] Or start from scratch with doom emacs?
 - [ ] Install treemacs though!
 
+## Emacs TODOs
+
+- [ ] dotemacs from scratch, start here, it has git-gutter etc. (but use use-package instead): https://www.reddit.com/r/emacs/comments/18toziz/introducing_lemacs_a_config_not_a_distro/
+- [ ] Emacs orgmode on android: https://www.reddit.com/r/emacs/comments/18tqpfb/sharing_my_emacs_workflow_and_dotfiles
+- [ ] Learn some elisp:
+  - https://www.gnu.org/software/emacs/manual/ , but especially:
+  - https://www.gnu.org/software/emacs/manual/eintr.html
+  - https://www.gnu.org/software/emacs/manual/elisp.html
+- Emacs streamers: https://www.reddit.com/r/emacs/comments/18u9pah/comment/kfj6f8f/
+
 ## Misc TODOs
 
 - [X] How to make Ctrl-Alt-t start tmux directly
