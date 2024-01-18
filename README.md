@@ -107,7 +107,8 @@ files
 
 ### Tmux
 
-- https://www.youtube.com/watch?v=H70lULWJeig
+- Follow https://www.youtube.com/watch?v=H70lULWJeig
+  - Install the tpm from github: `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 - https://draculatheme.com/tmux
 - Symlink `~/.tmux.conf` to the file here
 
