@@ -14,7 +14,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -34,6 +34,14 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
+# Wallpapers: Do `sudo apt install nitrogen`, call nitrogen and specify a folder in which your wallpapers run
+exec --no-startup-id nitrogen --set-auto ~/wallpapers/i3wm-refcard-wallpaper.png
+
+# Disable touchpad tap-to-click
+exec --no-startup-id synclient TapButton1=0
+exec --no-startup-id synclient TapButton2=0
+exec --no-startup-id synclient TapButton3=0
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -61,6 +69,8 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
+# WATCH OUT when changing these to hjkl instead of jklö. $mod+h is already "split horizontally".
+#   You could change mod-h and mod-v to $mod+Ctrl+h and $mod+Ctrl+v
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
