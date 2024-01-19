@@ -16,7 +16,7 @@
 	ll = log --graph --decorate --oneline
 	la = log --all --graph --decorate --oneline
 [core]
-	editor = vim
+	editor = nvim
 [pull]
 	rebase = false
 
