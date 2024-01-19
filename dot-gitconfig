@@ -17,3 +17,6 @@
 	la = log --all --graph --decorate --oneline
 [core]
 	editor = vim
+[pull]
+	rebase = false
+

@@ -169,6 +169,8 @@ If you're on Lubuntu:
 
 ### If i3
 
+- Install `dmenu`, the program starter, if it's not already installed
+- Install `nitrogen` as a wallpaper manager
 - Symlink `~/.config/i3/config` to `i3-config` here
 - (in vim, use the symlink path to edit this file, else syntax highlighting doesn't work)
 
