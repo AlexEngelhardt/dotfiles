@@ -157,6 +157,18 @@ The init.lua in this repo is adapted from https://github.com/nvim-lua/kickstart.
 
 - Symlink `~/.gitconfig` to the file here
 
-### lubuntu-rc.xml
+### If Xubuntu and xfce
+
+If you're on Xubuntu, most shortcuts, default apps etc. are configured via menu clicking.
+
+### If Lubuntu and LXDE
+
+If you're on Lubuntu:
 
 - Symlink `~/.config/openbox/lubuntu-rc.xml` to here
+
+### If i3
+
+- Symlink `~/.config/i3/config` to `i3-config` here
+- (in vim, use the symlink path to edit this file, else syntax highlighting doesn't work)
+
