@@ -136,16 +136,16 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 # You might have to install FontAwesome for the characters to appear correctly. See https://youtu.be/8-S0cWnLBKg?t=1592
 #   and see https://fontawesome.com/v4/cheatsheet/ to find good icons (you can copy-paste them!)
-set $ws1 "1:web "
-set $ws2 "2:mail "
-set $ws3 "3:term "
-set $ws4 "4:dev "
-set $ws5 "5:media "
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 " 1:web  "
+set $ws2 " 2:mail  "
+set $ws3 " 3:term  "
+set $ws4 " 4:dev  "
+set $ws5 " 5:media  "
+set $ws6 " 6 "
+set $ws7 " 7 "
+set $ws8 " 8 "
+set $ws9 " 9 "
+set $ws10 " 10 "
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
