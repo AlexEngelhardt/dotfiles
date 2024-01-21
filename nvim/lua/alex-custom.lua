@@ -8,3 +8,8 @@ vim.o.hlsearch = true
 
 -- Show relative line numbers in gutter
 vim.o.relativenumber = true
+
+-- Neovide settings
+if vim.g.neovide then
+  vim.o.guifont = "MesloLGS NF:h11"
+end
