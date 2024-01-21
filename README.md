@@ -174,10 +174,12 @@ doesn't work)
   - Install "Yosemite San Francisco" ttf fonts (put them into `~/.fonts`)
   - Change the theme for GTK applications
     - Install `lxappearance` and `arc-theme` via `apt`, then run `lxappearance`
-    and select one of the Arc themes
+    and select one of the Arc themes. Arc *Darker* is still a light theme, with Arc *Dark* your Firefox also switches websites to dark theme.
   - Change the `rofi` theme
     - `git clone https://github.com/lr-tech/rofi-themes-collection.git`
     - Select one. I used spotlight-dark
     - Copy it into `~/.local/share/rofi/themes/`
     - Run `rofi-theme-selector` and select it, confirm with Alt+a
-  - Install `picom`, link the config file here to `~/.config/picom/picom.conf`
+  - Install `picom` the compositor that handles transparency and fading
+    - link the config file here to `~/.config/picom/picom.conf`
+
