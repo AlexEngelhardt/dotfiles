@@ -16,14 +16,11 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
   - And this: https://www.youtube.com/watch?v=KKxhf50FIPI
 - https://dotfiles.github.io/inspiration/
 
-## TODO
-
-- [ ] Try neovide
-- [ ] install ripgrep, and some of these too?
-https://github.com/ibraheemdev/modern-unix
-
 ## TODO emacs startup faster
 
+- [ ] Migrate to `use-package`:
+  - https://www.reddit.com/r/emacs/comments/jjwtvp/migrating_to_usepackage/
+  - https://www.gnu.org/software/emacs/manual/html_node/use-package/index.html
 - [ ] Install `esup` the emacs startup profiler
   - or [benchmark-init](https://github.com/dholm/benchmark-init-el), or [profile-dotemacs](https://www.emacswiki.org/emacs/ProfileDotEmacs)
 - [ ] Look at `C-h v load-path` and 
@@ -44,25 +41,18 @@ https://github.com/ibraheemdev/modern-unix
 
 ## Misc TODOs
 
-- [X] How to make Ctrl-Alt-t start tmux directly
-- [X] How to enable middle click to paste in nvim?
-- [X] Install nicer fonts for zsh's p10k theme:
-https://github.com/romkatv/powerlevel10k#fonts
 - [ ] Make copy+paste behave the same in terminals and vim
   - mouse-highlight and middle-click?
   - Ctrl-Shift-C and V?
+  - See `:h clipboard` in nvim
  https://youtu.be/DzNmUNvnB04?t=423
-- [X] Customize tmux' dracula theme: https://draculatheme.com/tmux
-- [ ] Play with i3
-- [X] zsh autosuggestions as you type
-- [ ] Map CapsLock to Ctrl
+- [ ] Map CapsLock to Ctrl system-wide
 
 ### nvim TODOs
 
 - [ ] which-key (make sure which-key is about completions, e.g. "italic" in
 markdown mode, not about showing keybinds) should not complete on 'Enter'. Only
 on shift-Enter 
-- [X] vim leave edit mode with 'jk' instead of Esc
 - [ ] Find out what the LSP is and does
 - [ ] Vim has orgmode! https://github.com/nvim-orgmode/orgmode
 - [ ] Try NvChad. Is it a plugin or a straight config file? Does it conflict
