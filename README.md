@@ -16,9 +16,8 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
   - And this: https://www.youtube.com/watch?v=KKxhf50FIPI
 - https://dotfiles.github.io/inspiration/
 
-## TODO once new laptop is there
+## TODO
 
-- [ ] Xubuntu and i3
 - [ ] Try neovide
 - [ ] install ripgrep, and some of these too?
 https://github.com/ibraheemdev/modern-unix
@@ -142,12 +141,6 @@ The init.lua in this repo is adapted from https://github.com/nvim-lua/kickstart.
 
 - Symlink the whole folder `~/.config/nvim` to the folder here
 
-#### Learn vim
-
-- `vimtutor`
-- https://danielmiessler.com/p/vim
-- Drew Neil’s Practical Vim: Edit Text at the Speed of Thought
-
 ### Emacs
 
 - Symlink `~/.emacs` to the `dot-emacs.el` file here
@@ -169,8 +162,22 @@ If you're on Lubuntu:
 
 ### If i3
 
-- Install `dmenu`, the program starter, if it's not already installed
+- Install `rofi` or `dmenu`, as a program starter, if it's not already
+installed
 - Install `nitrogen` as a wallpaper manager
+- Install `xss-lock`
 - Symlink `~/.config/i3/config` to `i3-config` here
-- (in vim, use the symlink path to edit this file, else syntax highlighting doesn't work)
-
+- (in vim, use the symlink path to edit this file, else syntax highlighting
+doesn't work)
+- Copy `i3status.config` to `~/.config/i3status/config`
+- Ricing:
+  - Install "Yosemite San Francisco" ttf fonts (put them into `~/.fonts`)
+  - Change the theme for GTK applications
+    - Install `lxappearance` and `arc-theme` via `apt`, then run `lxappearance`
+    and select one of the Arc themes
+  - Change the `rofi` theme
+    - `git clone https://github.com/lr-tech/rofi-themes-collection.git`
+    - Select one. I used spotlight-dark
+    - Copy it into `~/.local/share/rofi/themes/`
+    - Run `rofi-theme-selector` and select it, confirm with Alt+a
+  - Install `picom`, link the config file here to `~/.config/picom/picom.conf`
