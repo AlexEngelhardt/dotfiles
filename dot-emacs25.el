@@ -10,7 +10,7 @@
 		 ))
     (mapc load-it (directory-files dir nil "\\.el$"))))
 
-(load-directory "~/github/dotfiles/emacs/")
+(load-directory "~/github/dotfiles/emacs25/")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -16,7 +16,7 @@
 
 ;; This file must load *first*, it sets package path etc.
 ;; Hence the "0_" in the file name.
-(add-to-list 'load-path "~/github/dotfiles/emacs/packages/")
+(add-to-list 'load-path "~/github/dotfiles/emacs25/packages/")
 
 ;; The emacs startup profiler
 ;; (add-to-list 'load-path "~/.emacs.d/elpa/esup-0.7.1")
