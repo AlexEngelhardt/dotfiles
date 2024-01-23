@@ -76,21 +76,38 @@
    '("88cb0f9c0c11dbb4c26a628d35eb9239d1cf580cfd28e332e654e7f58b4e721b" default))
  '(ispell-dictionary nil)
  '(package-selected-packages
-   '(cl-libify helm-org-rifle use-package helm-org deft helm markdown-mode cmake-mode modus-themes))
+   '(doom-themes cl-libify helm-org-rifle use-package helm-org deft helm markdown-mode cmake-mode modus-themes))
  '(vc-follow-symlinks t))
 
 
 ;; Theme
-;; Run M-x package-install and install `modus-themes`
-(load-theme 'modus-vivendi-tinted)
 
+;; Run M-x package-install and install `modus-themes`
+;; (load-theme 'modus-vivendi-tinted)
+
+(require 'doom-themes)
+;; Global settings (defaults)
+(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+      doom-themes-enable-italic t) ; if nil, italics is universally disabled
+;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each
+;; theme may have their own settings.
+(load-theme 'doom-molokai t)
+;; Enable flashing mode-line on errors
+(doom-themes-visual-bell-config)
+;; Enable custom neotree theme
+(doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
+
+;; Fonts
+
+;; My old Emacs 25 font:
+;;(set-face-attribute 'default nil :font "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1" )
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "MesloLGS NF" :foundry "PfEd" :slant normal :weight normal :height 120 :width normal)))))
+ '(default ((t (:family "MesloLGS NF" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
 
 
 ;;;; Load other init files too
@@ -99,5 +116,6 @@
 
 
 ;;;; Start with a file instead of empty
+;; TODO load this only if emacs started without a file
 (find-file "~/Dropbox/inbox.org")
 
