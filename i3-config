@@ -12,7 +12,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-# Also affects the fonts of all GTK applications (Rhythmbox, Firefox, etc), once you TODO
+# Also affects the fonts of all GTK applications (Rhythmbox, Firefox, etc), once you...
+# TODO a step is missing that the guy in the 3 videos linked above talked about.
 # font pango:monospace 10
 font pango:System San Francisco Display 10
 # font pango:MesloLGS NF 10
@@ -28,7 +29,10 @@ exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-# 10 minutes (600 seconds) until screen is locked
+# Screensaver and Screen locking
+# (I don't fully understand it. It seems I did set some settings in Xfce which
+# carried over to i3 via system-wide config files.
+# 10 minutes (600 seconds) until screen is locked:
 exec --no-startup-id xset s 600
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -101,6 +105,10 @@ bindsym $mod+Shift+l move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
+# (only!) the following command doesn't work.
+# It works with the right shift key, but now twith the left.
+# Here's a thread with a possible solution:
+# https://bbs.archlinux.org/viewtopic.php?id=191043
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
@@ -137,9 +145,9 @@ bindsym $mod+a focus parent
 # You might have to install FontAwesome for the characters to appear correctly. See https://youtu.be/8-S0cWnLBKg?t=1592
 #   and see https://fontawesome.com/v4/cheatsheet/ to find good icons (you can copy-paste them!)
 set $ws1 " 1:web  "
-set $ws2 " 2:mail  "
+set $ws2 " 2:dev  "
 set $ws3 " 3:term  "
-set $ws4 " 4:dev  "
+set $ws4 " 4:mail  "
 set $ws5 " 5:media  "
 set $ws6 " 6 "
 set $ws7 " 7 "
@@ -174,8 +182,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # Always make certain programs start in a certain workspace
 # Use `xprop` and click on e.g. Firefox to find out a window's *class* in the second value in the line starting with "WM_CLASS(STRING)"
 assign [class="firefox"] $ws1
-assign [class="thunderbird"] $ws2
 assign [class="Spotify"] $ws5
+assign [class="thunderbird"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -245,6 +253,9 @@ bar {
                 inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
                 urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
         }
+        # The following line shows status bar tray icons (Dropbox, nm-applet, etc) on your primary screen.
+        # It might disappear when you (un)plug a monitor. You might have to reboot
+        tray_output primary
 }
 
 ################################################################
@@ -256,6 +267,15 @@ bindsym $mod+F1 exec --no-startup-id thunar
 bindsym $mod+F2 exec --no-startup-id emacs
 #bindsym $mod+F3 exec --no-startup-id 
 #bindsym $mod+F4 exec --no-startup-id 
+#bindsym $mod+F5 exec --no-startup-id 
+#bindsym $mod+F6 exec --no-startup-id 
+#bindsym $mod+F7 exec --no-startup-id 
+#bindsym $mod+F8 exec --no-startup-id 
+#bindsym $mod+F9 exec --no-startup-id 
+#bindsym $mod+F10 exec --no-startup-id 
+bindsym $mod+F11 exec --no-startup-id sudo shutdown now
+#bindsym $mod+F12 exec --no-startup-id 
+
 
 # The XF86 keys (Fn+F1 etc.)
 # Run `xev` or `showkey` in a terminal and press them to see their names and/or
