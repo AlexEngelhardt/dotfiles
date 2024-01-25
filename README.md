@@ -41,11 +41,11 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
 
 ## Misc TODOs
 
-- [ ] Make copy+paste behave the same in terminals and vim
+- [X] Make copy+paste behave the same in terminals and vim
   - mouse-highlight and middle-click?
   - Ctrl-Shift-C and V?
   - See `:h clipboard` in nvim
- https://youtu.be/DzNmUNvnB04?t=423
+- [ ] Make copy+paste work in tmux too (this is the last one missing...) https://youtu.be/DzNmUNvnB04?t=691
 - [ ] Map CapsLock to Ctrl system-wide
 
 ### nvim TODOs
@@ -130,6 +130,10 @@ Install `kickstart.nvim` as described here: https://www.youtube.com/watch?v=stqU
 The init.lua in this repo is adapted from https://github.com/nvim-lua/kickstart.nvim/tree/master
 
 - Symlink the whole folder `~/.config/nvim` to the folder here
+- Install `xsel` (or `xclip`, but `xsel` is better in tmux
+([Source](https://askubuntu.com/questions/705620/xclip-vs-xsel))) so that both
+clipboards, `primary` (highlight + middleclick) and `clipboard` (ctrl(+shift)+c
+and ctrl(+shift)+v) work in vim too.
 
 ### Emacs
 
@@ -152,8 +156,7 @@ If you're on Lubuntu:
 
 ### If i3
 
-- Install `rofi` or `dmenu`, as a program starter, if it's not already
-installed
+- Install `rofi` to replace `dmenu` as a program starter
 - Install `nitrogen` as a wallpaper manager
 - Install `xss-lock`
 - Symlink `~/.config/i3/config` to `i3-config` here
@@ -173,3 +176,31 @@ doesn't work)
   - Install `picom` the compositor that handles transparency and fading
     - link the config file here to `~/.config/picom/picom.conf`
 
+#### Save and load a predefined workspace layout (e.g. an IDE workspace)
+
+- Create a keybind to a custom zsh script. The script could contain something like this:
+
+```
+i3-msg workspace number "3:dev"
+i3-msg split vertical
+i3-msg exec "kitty -T vim -d ~/code/src"
+sleep 1
+i3-msg exec "kitty -T 'git / poetry' -d ~/code"
+sleep 1
+i3-msg resize set height 20 ppt
+i3-msg focus parent
+i3-msg split horizontal
+i3-msg "exec --no-startup-id vlc"
+sleep 1
+i3-msg split vertical
+i3-msg "exec --no-startup-id thunar ~/videos/"
+sleep 1
+i3-msg resize set height 40 ppt
+```
+
+- We need the "sleep 1" commands because i3-msg doesn't wait for windows to open.
+This should mean that we only need sleep commands after any exec command.
+See https://github.com/i3/i3/issues/854
+
+- And we need --no-startup-id to prevent a 60-second long clock cursor to appear
+(see the i3 docs)
