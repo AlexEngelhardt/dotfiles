@@ -112,10 +112,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h
+bindsym $mod+b split horizontal
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split vertical
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -142,14 +142,14 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-# You might have to install FontAwesome for the characters to appear correctly. See https://youtu.be/8-S0cWnLBKg?t=1592
+# You have to install Nerd Fonts for the characters to appear correctly. See https://youtu.be/8-S0cWnLBKg?t=1592
 #   and see https://fontawesome.com/v4/cheatsheet/ to find good icons (you can copy-paste them!)
 set $ws1 " 1:web  "
 set $ws2 " 2:dev  "
 set $ws3 " 3:term  "
 set $ws4 " 4:mail  "
 set $ws5 " 5:media  "
-set $ws6 " 6 "
+set $ws6 " 6:bjj 󰭥 "
 set $ws7 " 7 "
 set $ws8 " 8 "
 set $ws9 " 9 "
@@ -261,16 +261,16 @@ bar {
 ################################################################
 # My custom keybindings
 
-bindsym $mod+Shift+x exec i3lock
+bindsym $mod+Shift+x exec --no-startup-id i3lock
 
-bindsym $mod+F1 exec --no-startup-id thunar
-bindsym $mod+F2 exec --no-startup-id emacs
-#bindsym $mod+F3 exec --no-startup-id 
-#bindsym $mod+F4 exec --no-startup-id 
-#bindsym $mod+F5 exec --no-startup-id 
+bindsym $mod+F1 exec --no-startup-id firefox
+bindsym $mod+F2 exec --no-startup-id thunderbird
+bindsym $mod+F3 exec --no-startup-id thunar
+bindsym $mod+F4 exec --no-startup-id emacs
+bindsym $mod+F5 exec --no-startup-id zenity --calendar
 #bindsym $mod+F6 exec --no-startup-id 
 #bindsym $mod+F7 exec --no-startup-id 
-#bindsym $mod+F8 exec --no-startup-id 
+bindsym $mod+F8 exec --no-startup-id /home/alexx/scripts/i3-danaher-ide
 #bindsym $mod+F9 exec --no-startup-id 
 #bindsym $mod+F10 exec --no-startup-id 
 bindsym $mod+F11 exec --no-startup-id sudo shutdown now
@@ -307,5 +307,5 @@ bindsym $mod+F11 exec --no-startup-id sudo shutdown now
 # the config. Use `exec_always` )
 
 # exec firefox
-exec_always picom
+exec_always --no-startup-id picom
 
