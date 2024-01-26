@@ -13,3 +13,8 @@ vim.o.relativenumber = true
 if vim.g.neovide then
   vim.o.guifont = "MesloLGS NF:h11"
 end
+
+-- Make F3 open a file explorer
+-- (:Explore for now. Try nvimtree or neotree too)
+vim.api.nvim_set_keymap('n', '<F3>', ':Texplore<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Texplore<CR>', { noremap = true, silent = true })
