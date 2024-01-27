@@ -9,6 +9,7 @@
 
 # Mod4 means the Windows key
 set $mod Mod4
+set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -81,9 +82,18 @@ bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -show-i
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+####
 # change focus
-# WATCH OUT when changing these to hjkl instead of jklö. $mod+h is already "split horizontally".
-#   You could change mod-h and mod-v to $mod+Ctrl+h and $mod+Ctrl+v
+
+# Alt+Tab for a rofi window selector:
+bindsym $alt+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi -show-icons
+# Alt+Tab to focus next window:
+# bindsym $alt+Tab focus next
+# Alt+Tab to focus next workspace, Alt+Shift+Tab to focus previous:
+# bindsym $alt+Tab workspace next
+# bindsym $alt+Shift+Tab workspace previous
+
+# watch out when changing these to hjkl instead of jklö. $mod+h defaults to "split horizontally".
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
