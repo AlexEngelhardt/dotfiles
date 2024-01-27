@@ -271,6 +271,11 @@ bar {
 ################################################################
 # My custom keybindings
 
+# scrot must trigger on *release* of print, not on press, else the release cancels it again
+bindsym --release Print exec --no-startup-id scrot -s
+#bindsym --release Scroll_Lock
+#bindsym --release Pause
+
 bindsym $mod+Shift+x exec --no-startup-id i3lock
 
 bindsym $mod+F1 exec --no-startup-id firefox
