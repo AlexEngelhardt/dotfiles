@@ -319,3 +319,5 @@ bindsym $mod+F11 exec --no-startup-id sudo shutdown now
 # exec firefox
 exec_always --no-startup-id picom
 
+# Automount USB drives:
+exec --no-startup-id udiskie &

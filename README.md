@@ -100,7 +100,8 @@ If you're on Lubuntu:
 
 - Install `rofi` to replace `dmenu` as a program starter
 - Install `nitrogen` as a wallpaper manager
-- Install `xss-lock`
+- Install `xss-lock`, a screensaver manager
+- Install `udisks2` and `udiskie` to automount USB drives
 - Symlink `~/.config/i3/config` to `i3-config` here
 - (in vim, use the symlink path to edit this file, else syntax highlighting
 doesn't work)
