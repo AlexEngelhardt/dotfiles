@@ -110,6 +110,10 @@
  '(default ((t (:family "MesloLGS NF" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
 
 
+;;;; Org mode
+(setq org-startup-folded "showeverything")
+
+
 ;;;; Load other init files too
 (load-file "~/git/dotfiles/emacs27/deft.el")
 (load-file "~/git/dotfiles/emacs27/helm.el")
