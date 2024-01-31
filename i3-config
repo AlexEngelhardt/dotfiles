@@ -274,7 +274,7 @@ bar {
 # scrot must trigger on *release* of print, not on press, else the release cancels it again
 bindsym --release Print exec --no-startup-id scrot -s
 #bindsym --release Scroll_Lock
-#bindsym --release Pause
+bindsym $mod+Pause exec sudo shutdown now
 
 bindsym $mod+Shift+x exec --no-startup-id i3lock
 
@@ -288,7 +288,7 @@ bindsym $mod+F5 exec --no-startup-id zenity --calendar
 bindsym $mod+F8 exec --no-startup-id /home/alexx/scripts/i3-danaher-ide
 #bindsym $mod+F9 exec --no-startup-id 
 #bindsym $mod+F10 exec --no-startup-id 
-bindsym $mod+F11 exec --no-startup-id sudo shutdown now
+#bindsym $mod+F11 exec --no-startup-id
 #bindsym $mod+F12 exec --no-startup-id 
 
 
