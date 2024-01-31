@@ -18,3 +18,8 @@ end
 -- (:Explore for now. Try nvimtree or neotree too)
 vim.api.nvim_set_keymap('n', '<F3>', ':Texplore<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Texplore<CR>', { noremap = true, silent = true })
+
+-- Make F4 "format around paragraph
+vim.api.nvim_set_keymap('n', '<F4>', 'gqap', { noremap = true, silent = true })
+
+
