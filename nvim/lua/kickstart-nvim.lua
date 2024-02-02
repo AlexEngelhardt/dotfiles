@@ -429,7 +429,12 @@ vim.defer_fn(function()
     auto_install = false,
 
     highlight = { enable = true },
-    indent = { enable = true },
+    indent = {
+      enable = true,
+      disable = {
+        "markdown", -- indentation at bullet points is worse than builtin formatter
+      }
+    },
     incremental_selection = {
       enable = true,
       keymaps = {
