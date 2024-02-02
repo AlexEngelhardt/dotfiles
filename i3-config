@@ -272,7 +272,7 @@ bar {
 # My custom keybindings
 
 # scrot must trigger on *release* of print, not on press, else the release cancels it again
-bindsym --release Print exec --no-startup-id scrot -s
+bindsym --release $mod+Print exec --no-startup-id scrot -s
 #bindsym --release Scroll_Lock
 bindsym $mod+Pause exec sudo shutdown now
 
@@ -291,6 +291,12 @@ bindsym $mod+F8 exec --no-startup-id /home/alexx/scripts/i3-danaher-ide
 #bindsym $mod+F11 exec --no-startup-id
 #bindsym $mod+F12 exec --no-startup-id 
 
+# Bind F-keys without $mod prefix
+bindsym F5 exec --no-startup-id playerctl play-pause
+bindsym F6 exec --no-startup-id playerctl next
+bindsym F7 exec --no-startup-id playerctl position 10-
+bindsym F8 exec --no-startup-id playerctl position 10+
+
 
 # The XF86 keys (Fn+F1 etc.)
 # Run `xev` or `showkey` in a terminal and press them to see their names and/or
@@ -304,7 +310,7 @@ bindsym $mod+F8 exec --no-startup-id /home/alexx/scripts/i3-danaher-ide
 # F3: XF86AudioRaiseVolume
 # F4: XF86AudioMute
 
-# F5: (?) XF86-screenbriightness something? 
+# F5: (?) XF86-screenbrightness something? 
 # F6:  
 # F7: XF86Display
 # F8: XF86WLAN
@@ -326,3 +332,4 @@ exec_always --no-startup-id picom
 
 # Automount USB drives:
 exec --no-startup-id udiskie &
+
