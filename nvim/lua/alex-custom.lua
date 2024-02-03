@@ -26,4 +26,6 @@ vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Texplore<CR>', { noremap = true, sil
 --   add some options there
 vim.api.nvim_set_keymap('n', '<F4>', 'gqap', { noremap = true, silent = true })
 
+-- Make F5 delete trailing whitespaces
+vim.api.nvim_set_keymap('n', '<F5>', [[:%s/\s\+$//e<CR>]], { noremap = true })
 
