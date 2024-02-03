@@ -6,3 +6,6 @@ require('kickstart-nvim')
 -- My custom overwrites
 require('alex-custom')
 
+-- Load a vimscript file too
+local vimrc = vim.fn.stdpath("config") .. "/lua/alex-custom.vim"
+vim.cmd.source(vimrc)
