@@ -21,6 +21,8 @@ Initiated by rereading chapter 3 of The Pragmatic Programmer.
 - Install kitty as a terminal emulator. terminator couldn't show all UTF-8 symbols, which is bad for the new-style status bars etc.  alacritty is even more popular, but Lubuntu 18.10 couldn't install it easily.
 - Install `ripgrep` too. Some neovim plugin needs it iirc (and learning to use it will be good anyway!)
 - Install `fzf`, neovim's plugins might need it and it's fun to use anyway!
+- Install `fd` for neovim's Telescope
+  - On Ubuntu, the package is `fd-find` and the executable is `fdfind` instead of `fd`. Create an alias for it in `.zshrc`!
 - Install neovim **from source** (My Ubuntu 18.10's nvim doesn't allow kickstart.nvim). It's time to ditch emacs :)
 - Switch from bash to zsh
   - And a ton of plugins: https://github.com/unixorn/awesome-zsh-plugins
