@@ -4,6 +4,9 @@
 -- (I edited that file in a few places though)
 -- require('kickstart-nvim')
 
+-- The following video was recommended to show you how to split up e.g.
+-- kickstart-nvim into multiple files, one per plugin:
+-- https://www.youtube.com/watch?v=6mxWayq-s9I
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
