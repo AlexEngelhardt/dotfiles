@@ -1,18 +1,5 @@
--- Hi :)
-
--- Use 'fj' instead of <Esc> to switch from insert to visual:
-vim.api.nvim_set_keymap('i', 'jk', '<Esc>', { noremap = true, silent = true})
-
--- Highlight search results while typing
-vim.o.hlsearch = true
-
--- Show relative line numbers in gutter
-vim.o.relativenumber = true
-
--- Neovide settings
-if vim.g.neovide then
-  vim.o.guifont = "MesloLGS NF:h11"
-end
+-- Custom keybinds: Type `:help map-which-keys` for suggestions on what keys to
+-- use for custom keybinds.
 
 -- Make F3 open a file explorer
 -- (:Explore for now. Try nvimtree or neotree too)
