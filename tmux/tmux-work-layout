@@ -1,0 +1,50 @@
+# Save this script e.g. in ~/scripts/tmux-work-layout.
+#
+# Start `tmux`, then within a new session, run 
+# `tmux source ~/scripts/tmux-work-layout`
+
+# See https://askubuntu.com/questions/830484/how-to-start-tmux-with-several-panes-open-at-the-same-time
+
+# and https://man7.org/linux/man-pages/man1/tmux.1.html
+
+
+rename-session work
+
+
+# First window: Called IDE, runs nvim on top
+# and a terminal on the bottom
+
+rename-window ide
+send-keys "cd ~/git" Enter
+send-keys "vim" Enter
+send-keys ":Neotree" Enter
+split-window -v
+resize-pane -y 20%
+
+
+# Second window: Called docs, runs nvim with
+# neotree in ~/docs
+
+new-window -n docs
+send-keys "cd ~/docs" Enter
+send-keys "vim" Enter
+send-keys ":Neotree" Enter
+
+
+# Third window: Cheatsheets
+
+new-window -n cheatsheets
+send-keys "cd ~/git/cheatsheets && vim" Enter
+send-keys ":Neotree" Enter
+
+
+# Fourth window: "temp" for quick stuff
+
+new-window -n temp
+
+
+# Select the first window again
+
+select-window -t ide
+select-pane -t 1
+
