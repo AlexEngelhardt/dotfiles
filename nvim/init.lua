@@ -39,7 +39,24 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
-require('lazy').setup("plugins")
+require('lazy').setup({
+  {import = "plugins"},
+  -- Subdirectories of "plugins" will not automatically be loaded.
+  -- You have to import them separately:
+  --  {import = "plugins.lsp"},
+}, {
+  -- lazy.nvim options go in here
+  install = {
+    colorscheme = { "nightfly" },
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false
+  }
+})
 
 -- My custom overwrites
 require('options')
