@@ -27,8 +27,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- Make F3 open a file explorer
 -- (:Explore, :Texplore are defaults, :Neotree or :Nvimtree modern alternatives)
-vim.api.nvim_set_keymap('n', '<F3>', ':Neotree toggle<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Neotree toggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F3>', ':Neotree toggle<CR>', { noremap = true, silent = true, desc = "Neotree on/off" })
+vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Neotree toggle<CR>', { noremap = true, silent = true, desc = "Neotree on/off" })
 -- In Neotree, press `?` to see a popup with commands. `q` closes a Neotree sidebar
 
 -- Make F4 "format around paragraph"
@@ -36,12 +36,12 @@ vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Neotree toggle<CR>', { noremap = tru
 --   treesitter config to disable formatting of markdown code - it overwrote the default
 --   formatter. Also see `:help formatoptions` and `:help fo-table`, you might have to
 --   add some options there
-vim.api.nvim_set_keymap('n', '<F4>', 'gqap', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F4>', 'gqap', { noremap = true, silent = true, desc = "Format paragraph" })
 
 -- Make F5 delete trailing whitespaces
-vim.api.nvim_set_keymap('n', '<F5>', [[:%s/\s\+$//e<CR>]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<F5>', [[:%s/\s\+$//e<CR>]], { noremap = true, desc = "Delete all trailing whitespace" })
 
 -- Make F6 indent the whole buffer
 -- (`=` indents!)
-vim.api.nvim_set_keymap('n', '<F6>', "gg=G", { noremap = true })
+vim.api.nvim_set_keymap('n', '<F6>', "gg=G", { noremap = true, desc = "Indent whole buffer" })
 

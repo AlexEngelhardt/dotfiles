@@ -7,6 +7,8 @@
 -- The following video was recommended to show you how to split up e.g.
 -- kickstart-nvim into multiple files, one per plugin:
 -- https://www.youtube.com/watch?v=6mxWayq-s9I
+-- It also shows how to lazy-load plugins only when some event happens.
+-- Might be useful later when vim startup time becomes long
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -38,9 +40,6 @@ vim.opt.rtp:prepend(lazypath)
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
 require('lazy').setup("plugins")
--- <Alex> I moved the plugins from kickstart.nvim into
--- one file per plugin by following this video:
--- https://www.youtube.com/watch?v=6mxWayq-s9I
 
 -- My custom overwrites
 require('options')
@@ -52,5 +51,6 @@ local vimrc = vim.fn.stdpath("config") .. "/vimscript.vim"
 vim.cmd.source(vimrc)
 
 -- The line beneath this is called `modeline`.
+-- It sets the tab width to equal 2 spaces
 -- See `:help modeline` and `:help option-list`
 -- vim: ts=2 sts=2 sw=2 et
