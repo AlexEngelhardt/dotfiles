@@ -41,3 +41,7 @@ vim.api.nvim_set_keymap('n', '<F4>', 'gqap', { noremap = true, silent = true })
 -- Make F5 delete trailing whitespaces
 vim.api.nvim_set_keymap('n', '<F5>', [[:%s/\s\+$//e<CR>]], { noremap = true })
 
+-- Make F6 indent the whole buffer
+-- (`=` indents!)
+vim.api.nvim_set_keymap('n', '<F6>', "gg=G", { noremap = true })
+

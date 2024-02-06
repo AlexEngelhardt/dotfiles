@@ -54,5 +54,6 @@ require('keybinds')
 local vimrc = vim.fn.stdpath("config") .. "/vimscript.vim"
 vim.cmd.source(vimrc)
 
--- The line beneath this is called `modeline`. See `:help modeline`
+-- The line beneath this is called `modeline`.
+-- See `:help modeline` and `:help option-list`
 -- vim: ts=2 sts=2 sw=2 et
