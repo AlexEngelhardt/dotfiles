@@ -46,6 +46,9 @@ require('lazy').setup({
   --  {import = "plugins.lsp"},
 }, {
   -- lazy.nvim options go in here
+  defaults = {
+    lazy = true
+  },
   install = {
     colorscheme = { "nightfly" },
   },
