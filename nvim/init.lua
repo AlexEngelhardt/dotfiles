@@ -62,11 +62,6 @@ require('lazy').setup({
 require('options')
 require('keybinds')
 
--- You can load a vimscript file too
--- (for stuff I haven't found out how to translate into Lua yet)
-local vimrc = vim.fn.stdpath("config") .. "/vimscript.vim"
-vim.cmd.source(vimrc)
-
 -- The line beneath this is called `modeline`.
 -- It sets the tab width to equal 2 spaces
 -- See `:help modeline` and `:help option-list`
