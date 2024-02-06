@@ -37,7 +37,7 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
-require('lazy').setup("alex.plugins")
+require('lazy').setup("plugins")
 -- <Alex> I moved the plugins from kickstart.nvim into
 -- one file per plugin by following this video:
 -- https://www.youtube.com/watch?v=6mxWayq-s9I
