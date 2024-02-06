@@ -27,8 +27,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 
 -- Make F3 open a file explorer
 -- (:Explore, :Texplore are defaults, :Neotree or :Nvimtree modern alternatives)
-vim.api.nvim_set_keymap('n', '<F3>', ':Neotree<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Neotree<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F3>', ':Neotree toggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Neotree toggle<CR>', { noremap = true, silent = true })
 -- In Neotree, press `?` to see a popup with commands. `q` closes a Neotree sidebar
 
 -- Make F4 "format around paragraph"
