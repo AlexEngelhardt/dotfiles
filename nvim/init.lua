@@ -15,9 +15,6 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 
--- Temp: store plugins load and config here until they move to their own folder
-
-
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
