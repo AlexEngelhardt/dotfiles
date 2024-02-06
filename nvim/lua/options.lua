@@ -50,3 +50,27 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+
+----------------------------------------------------------------
+-- Autocommands
+
+-- see: https://www.youtube.com/watch?v=HR1dKKrOmDs&t=29s
+-- For the possible events (like FileType), see `:help events`
+-- For FileType events, `pattern` is the *type* (as shown in the
+-- lualine), not the filename (so "*.lua" won't work)
+-- Type `:echo &ft` in a buffer to see its file type
+
+
+-- Set tabs to 2 spaces in .lua files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"lua", "text", "markdown"},
+  callback = function()
+    -- print("event fired: Entered a lua buffer")  -- <- debug line :)
+    vim.opt_local.expandtab = true
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.smartindent = true
+    vim.opt_local.tabstop = 2
+    vim.opt_local.softtabstop = 2
+  end,
+})
