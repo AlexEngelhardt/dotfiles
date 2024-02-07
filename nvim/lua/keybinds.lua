@@ -37,6 +37,12 @@ vim.api.nvim_set_keymap('n', '<leader>w', ":w<CR>", { noremap = true, desc = "[W
 ----------------------------------------------------------------
 -- Leader-ö becomes my submenu of keybinds
 
+require("which-key").register({
+  ö = {
+    name = "+Alex keybinds",
+  }
+}, { prefix = "<leader>" })
+
 -- "format around paragraph"
 -- Note: To correctly format markdown lists, I had to overwrite kickstart.nvim's
 --   treesitter config to disable formatting of markdown code - it overwrote the default
@@ -48,3 +54,15 @@ vim.api.nvim_set_keymap('n', '<leader>öh', ":nohlsearch<CR>", { noremap = true,
 -- (`=` indents!)
 vim.api.nvim_set_keymap('n', '<leader>öi', "gg=G", { noremap = true, desc = "[I]ndent whole buffer" })
 vim.api.nvim_set_keymap('n', '<leader>öt', [[:%s/\s\+$//e<CR>]], { noremap = true, desc = "Delete all [T]railing whitespace" })
+
+
+-- Try defining keybinds within which-key. See:
+-- https://github.com/folke/which-key.nvim?tab=readme-ov-file#%EF%B8%8F-mappings
+
+require("which-key").register({
+  Ü = {
+    name = "grüpname",
+    f = {"<cmd>Telescope find_files<cr>", "Fünd Füle"},
+  }
+}, { prefix = "<leader>" })
+
