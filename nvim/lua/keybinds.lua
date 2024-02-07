@@ -42,6 +42,7 @@ vim.api.nvim_set_keymap('n', '<leader>w', ":w<CR>", { noremap = true, desc = "[W
 --   treesitter config to disable formatting of markdown code - it overwrote the default
 --   formatter. Also see `:help formatoptions` and `:help fo-table`, you might have to
 --   add some options there
+vim.api.nvim_set_keymap('n', '<leader>öd', '<cmd>DiffOrig<cr>', { noremap = true, silent = true, desc = "[D]iff buffer with saved file" })
 vim.api.nvim_set_keymap('n', '<leader>öf', 'gqap', { noremap = true, silent = true, desc = "[F]ormat paragraph" })
 vim.api.nvim_set_keymap('n', '<leader>öh', ":nohlsearch<CR>", { noremap = true, desc = "Search [H]ighlight off" })
 -- (`=` indents!)
