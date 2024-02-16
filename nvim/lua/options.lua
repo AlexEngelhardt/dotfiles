@@ -7,7 +7,7 @@ vim.o.hlsearch = true
 -- Make line numbers default
 vim.wo.number = true
 -- Show relative line numbers in gutter
-vim.o.relativenumber = true
+-- vim.o.relativenumber = true
 
 -- Neovide settings
 if vim.g.neovide then
