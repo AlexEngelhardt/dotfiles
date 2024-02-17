@@ -31,8 +31,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.api.nvim_set_keymap('n', '<F3>', ':Neotree toggle<CR>', { noremap = true, silent = true, desc = "File Explorer on/off" })
 vim.api.nvim_set_keymap('i', '<F3>', '<Esc>:Neotree toggle<CR>', { noremap = true, silent = true, desc = "File Explorer on/off" })
 
--- Quicker writing because German keyboard ':' hurts my pinky
+-- Quicker writing and quitting because German keyboard ':' hurts my pinky
 vim.api.nvim_set_keymap('n', '<leader>w', ":w<CR>", { noremap = true, desc = "[W]rite buffer" })
+vim.api.nvim_set_keymap('n', '<leader>q', ":q<CR>", { noremap = true, desc = "[Q]uit" })
 
 ----------------------------------------------------------------
 -- Leader-ö becomes my submenu of keybinds

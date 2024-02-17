@@ -1,5 +1,7 @@
 return {
   -- Highlight, edit, and navigate code
+  -- Treesitter generates an abstract syntax tree out of
+  --   your code. *Parsers* can then use this AST.
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'nvim-treesitter/nvim-treesitter-textobjects',

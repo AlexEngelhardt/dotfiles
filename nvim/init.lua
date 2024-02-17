@@ -17,8 +17,9 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 
--- [[ Install `lazy.nvim` plugin manager ]]
---    https://github.com/folke/lazy.nvim
+-- Check if the lazy path exists on your filesystem, and if not,
+-- Install `lazy.nvim` plugin manager.
+-- See https://github.com/folke/lazy.nvim and
 --    `:help lazy.nvim.txt` for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -40,12 +41,13 @@ vim.opt.rtp:prepend(lazypath)
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
+  -- The first table argument to `setup` is the list of plugins to load
   {import = "plugins"},
   -- Subdirectories of "plugins" will not automatically be loaded.
   -- You have to import them separately:
-  --  {import = "plugins.lsp"},
+  {import = "plugins.lsp"},
 }, {
-  -- lazy.nvim options go in here
+  -- The second table argument holds lazy.nvim options
   install = {
     colorscheme = { "nightfly" },
   },
