@@ -63,47 +63,41 @@ return {
             diagnostics = {
               -- otherwise "vim.o.*" shows an error
               globals = { 'vim' }
+            },
+            runtime = {
+              -- Allow unicode variable names (needed for <leader>ö keybinds)
+              unicodeName = true
             }
           }
         }
       })
       lspconfig.pyright.setup({})
 
+      -- See https://github.com/neovim/nvim-lspconfig/blob/master/README.md
+      -- Use LspAttach autocommand to only map the following keys
+      -- after the language server attaches to the current buffer
+      vim.api.nvim_create_autocmd('LspAttach', {
+        group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+        callback = function(ev)
+          -- Enable completion triggered by <c-x><c-o>
+          vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-      local nmap = function(keys, func, desc)
-        if desc then
-          desc = 'LSP: ' .. desc
-        end
+          -- Buffer local mappings
+          vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { buffer = ev.buf, desc="LSP: [R]e[n]ame" })
+          vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, { buffer = ev.buf, desc="LSP: [G]oto [D]efinition" })
+          vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { buffer = ev.buf, desc="LSP: [G]oto [R]eferences" })
+          vim.keymap.set('n', 'gI', require('telescope.builtin').lsp_implementations, { buffer = ev.buf, desc="LSP: [G]oto [I]mplementation" })
+          vim.keymap.set('n', '<leader>D', require('telescope.builtin').lsp_type_definitions, { buffer = ev.buf, desc="LSP: Type [D]efinition" })
+          vim.keymap.set('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols, { buffer = ev.buf, desc="LSP: [D]ocument [S]ymbols" })
+          vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_workspace_symbols, { buffer = ev.buf, desc="LSP: [W]orkspace [S]ymbols" })
 
-        vim.keymap.set('n', keys, func, { desc = desc })
-      end
+          -- See `:help K` for why this keymap
+          vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = ev.buf, desc="Hover Documentation" })
+          vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, { buffer = ev.buf, desc="LSP: Signature Documentation" })
 
-      nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-      nmap('<leader>ca', function()
-        vim.lsp.buf.code_action { context = { only = { 'quickfix', 'refactor', 'source' } } }
-      end, '[C]ode [A]ction')
-
-      nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-      nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-      nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-      nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-      nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
-      nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-
-      -- See `:help K` for why this keymap
-      nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-      nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
-
-      -- Lesser used LSP functionality
-      nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-      nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
-      nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
-      nmap('<leader>wl', function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-      end, '[W]orkspace [L]ist Folders')
-
-      nmap('<leader>fb', vim.lsp.buf.format, '[F]ormat [B]uffer with LSP')
-
+          vim.keymap.set('n', '<leader>fb', vim.lsp.buf.format, { buffer = ev.buf, desc="LSP: [F]ormat [B]uffer" })
+        end,
+      })
     end
   },
 }
