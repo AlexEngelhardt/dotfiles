@@ -1,4 +1,4 @@
-return {
+local onedark = {
   -- Theme inspired by Atom
   'navarasu/onedark.nvim',
   priority = 1000,
@@ -11,4 +11,17 @@ return {
     require('onedark').load()
   end,
 }
+
+local catppuccin = {
+  "catppuccin/nvim",
+  lazy = false,
+  name = "catppuccin",
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme "catppuccin"
+  end
+}
+
+return onedark
+-- return catppuccin
 
