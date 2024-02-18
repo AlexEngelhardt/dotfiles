@@ -66,7 +66,7 @@ return {
               goto_next_start = {
                 -- <Alex> Somehow the @function.outer automatically are documented as "Next method start" in which-key,
                 -- but `]]` gets a weird "Goto next start @class.outer" kinda doc
-                [']m'] = '@function.outer',  
+                [']m'] = '@function.outer',
                 [']]'] = { query='@class.outer', desc='Next class start' },
               },
               goto_next_end = {
