@@ -5,7 +5,7 @@
 -- You must install black, isort, etc. manually so the CLI program is available, though!
 return {
 	"stevearc/conform.nvim",
-	opts = {},
+  event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local conform = require("conform")
 		conform.setup({
@@ -23,6 +23,19 @@ return {
         -- markdown = { "mdformat" },  -- not pretty list formatting :(
 			},
 		})
-		vim.keymap.set("n", "<leader>fb", conform.format, { desc = "[F]ormat [B]uffer" })
+		vim.keymap.set(
+      "n",
+      "<leader>fb",
+      function()
+        -- Check it out! If you want to pass arguments to format,
+        -- it seems you have to wrap it into a function()-end block
+        conform.format({
+          lsp_fallback = false,
+          async = false,
+          timeout_ms = 500
+        })
+      end,
+      { desc = "[F]ormat [B]uffer" }
+    )
 	end,
 }
