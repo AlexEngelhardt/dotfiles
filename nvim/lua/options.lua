@@ -64,7 +64,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Set tabs to 2 spaces in .lua files
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = {"lua", "text", "markdown"},
+  pattern = {"lua", "text"},
   callback = function()
     -- print("event fired: Entered a lua buffer")  -- <- debug line :)
     vim.opt_local.expandtab = true
@@ -74,6 +74,19 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.softtabstop = 2
   end,
 })
+
+-- Set tabs to 4 spaces in markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"markdown"},
+  callback = function()
+    vim.opt_local.expandtab = true
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.smartindent = true
+    vim.opt_local.tabstop = 4
+    vim.opt_local.softtabstop = 4
+  end,
+})
+
 
 
 ----------------------------------------------------------------
