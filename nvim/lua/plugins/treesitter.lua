@@ -30,7 +30,13 @@ return {
         ignore_install = {},
         -- You can specify additional Treesitter modules here: -- For example: -- playground = {--enable = true,-- },
           modules = {},
-          highlight = { enable = true },
+          highlight = {
+            enable = true,
+            disable = {
+              "markdown",  -- treesitter highlight doesn't render italics in markdown correctly, the default highlighter works better
+              "markdown_inline",
+            }
+          },
           indent = {
             enable = true,
             disable = {
