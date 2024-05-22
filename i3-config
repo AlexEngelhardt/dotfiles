@@ -85,6 +85,9 @@ bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode -show-i
 ####
 # change focus
 
+# With "no", a new window is not focused when the mouse *moves* into it, only when it *clicks* on it
+focus_follows_mouse no
+
 # Alt+Tab for a rofi window selector:
 bindsym $alt+Tab exec --no-startup-id rofi -modi combi -combi-modi window -show combi -show-icons
 # Alt+Tab to focus next window:
