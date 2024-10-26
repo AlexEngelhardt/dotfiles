@@ -269,6 +269,8 @@ bar {
         # The following line shows status bar tray icons (Dropbox, nm-applet, etc) on your primary screen.
         # It might disappear when you (un)plug a monitor. You might have to reboot
         tray_output primary
+	# Use Nerd Font so the icons display properly:
+	font pango:MesloLGS NF 10
 }
 
 ################################################################
