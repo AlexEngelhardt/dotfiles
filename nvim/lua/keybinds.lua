@@ -38,11 +38,9 @@ vim.api.nvim_set_keymap('n', '<leader>q', ":q<CR>", { noremap = true, desc = "[Q
 ----------------------------------------------------------------
 -- Leader-ö becomes my submenu of keybinds
 
-require("which-key").register({
-  ö = {
-    name = "+Alex keybinds",
-  }
-}, { prefix = "<leader>" })
+require("which-key").add({
+  { "<leader>ö", group = "+Alex keybinds" }
+})
 
 -- "format around paragraph"
 -- Note: To correctly format markdown lists, I had to overwrite kickstart.nvim's
@@ -60,10 +58,7 @@ vim.api.nvim_set_keymap('n', '<leader>öt', [[:%s/\s\+$//e<CR>]], { noremap = tr
 -- Try defining keybinds within which-key. See:
 -- https://github.com/folke/which-key.nvim?tab=readme-ov-file#%EF%B8%8F-mappings
 
-require("which-key").register({
-  Ü = {
-    name = "grüpname",
-    f = {"<cmd>Telescope find_files<cr>", "Fünd Füle"},
-  }
-}, { prefix = "<leader>" })
-
+require("which-key").add({
+    { "<leader>Ü", group = "grüpname" },
+    { "<leader>Üf", "<cmd>Telescope find_files<cr>", desc = "Fünd Füle" },
+})
