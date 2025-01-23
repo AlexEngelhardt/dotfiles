@@ -149,3 +149,9 @@ See https://github.com/i3/i3/issues/854
 
 - And we need --no-startup-id to prevent a 60-second long clock cursor to appear
 (see the i3 docs)
+
+# Japanese Input
+
+- This guide worked for me (after some rebooting and retrying the same thing):
+  - https://help.ubuntu.com/community/JapaneseInput
+  - Set it up in the default Ubuntu environment, not in i3. Then the taskbar applet to switch should appear in i3 too.
