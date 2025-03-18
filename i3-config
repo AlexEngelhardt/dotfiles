@@ -289,7 +289,7 @@ bindsym $mod+F3 exec --no-startup-id thunar
 bindsym $mod+F4 exec --no-startup-id emacs
 
 bindsym $mod+F5 exec --no-startup-id zenity --calendar
-bindsym $mod+F6 exec --no-startup-id /home/alexx/scripts/japanese
+bindsym $mod+F6 exec --no-startup-id anki
 #bindsym $mod+F7 exec --no-startup-id 
 bindsym $mod+F8 exec --no-startup-id /home/alexx/scripts/i3-danaher-ide
 
