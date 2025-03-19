@@ -155,3 +155,6 @@ See https://github.com/i3/i3/issues/854
 - This guide worked for me (after some rebooting and retrying the same thing):
   - https://help.ubuntu.com/community/JapaneseInput
   - Set it up in the default Ubuntu environment, not in i3. Then the taskbar applet to switch should appear in i3 too.
+- After this, typing kanji worked in GUI applications, but **not in terminal emulators**
+  - Workaround: Use emacs-gui instead of terminal emacs, and use `neovide` instead of terminal vim
+    - To fix a too-big font size in neovide, start it by setting an env variable before: `WINIT_X11_SCALE_FACTOR=1 neovide`
